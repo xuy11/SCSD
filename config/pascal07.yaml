@@ -1,0 +1,9 @@
+alpha: 10.0
+lambd: 0.01
+epochs: 500
+lr: 0.001
+dropout_rate: 0.5
+tau: 0.1
+batch_size: 128
+z_dim: 512
+hidden_size: 2
