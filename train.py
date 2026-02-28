@@ -107,10 +107,6 @@ def test(loader, model, loss_model, epoch,logger):
     total_labels = np.array(total_labels)
     total_preds = np.array(total_preds)
 
-    codebook_cluster_size = model.quantize.cluster_size
-    zero_cnt = (codebook_cluster_size == 0).sum().item()
-    print(f"Unused code in codebook(unused,used,total): {zero_cnt,len(codebook_cluster_size)-zero_cnt,len(codebook_cluster_size)}")
-
     evaluation_results = evaluation.do_metric(total_preds, total_labels)
     logger.info('Epoch:[{0}]\t'
                 'Time {batch_time.avg:.3f}\t'
